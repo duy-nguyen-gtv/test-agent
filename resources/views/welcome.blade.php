@@ -219,5 +219,72 @@
         @if (Route::has('login'))
             <div class="h-14.5 hidden lg:block"></div>
         @endif
+
+        <div
+            id="welcome-modal"
+            class="fixed inset-0 z-50 hidden items-center justify-center p-6 bg-black/50"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="welcome-modal-title"
+        >
+            <div class="w-full max-w-md p-6 lg:p-8 bg-white dark:bg-[#161615] rounded-lg shadow-[inset_0px_0px_0px_1px_rgba(26,26,0,0.16)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d]">
+                <h2 id="welcome-modal-title" class="mb-2 text-lg font-medium">Welcome to Laravel</h2>
+                <p class="mb-6 text-sm leading-relaxed text-[#706f6c] dark:text-[#A1A09A]">
+                    Thanks for stopping by. This is your new Laravel application, a great place to start building something amazing.
+                </p>
+                <div class="flex items-center justify-end gap-3">
+                    <a
+                        href="https://laravel.com/docs"
+                        target="_blank"
+                        class="inline-block px-5 py-1.5 text-sm leading-normal text-[#1b1b18] border border-[#e3e3e0] dark:border-[#3E3E3A] dark:text-[#EDEDEC] hover:border-[#1915014a] dark:hover:border-[#62605b] rounded-sm"
+                    >
+                        Documentation
+                    </a>
+                    <button
+                        type="button"
+                        data-modal-close
+                        class="inline-block px-5 py-1.5 text-sm leading-normal text-white bg-[#1b1b18] border border-black rounded-sm hover:bg-black dark:bg-[#eeeeec] dark:border-[#eeeeec] dark:text-[#1C1C1A] dark:hover:bg-white dark:hover:border-white"
+                    >
+                        Get started
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const modal = document.getElementById('welcome-modal');
+
+                if (!modal) {
+                    return;
+                }
+
+                const open = () => {
+                    modal.classList.remove('hidden');
+                    modal.classList.add('flex');
+                };
+
+                const close = () => {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                };
+
+                modal.querySelector('[data-modal-close]')?.addEventListener('click', close);
+
+                modal.addEventListener('click', (event) => {
+                    if (event.target === modal) {
+                        close();
+                    }
+                });
+
+                document.addEventListener('keydown', (event) => {
+                    if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+                        close();
+                    }
+                });
+
+                open();
+            });
+        </script>
     </body>
 </html>
