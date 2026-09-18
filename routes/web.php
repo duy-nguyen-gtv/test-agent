@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthenticatedSessionController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisteredUserController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,3 +16,5 @@ Route::get('login', [AuthenticatedSessionController::class, 'create'])->name('lo
 Route::post('login', [AuthenticatedSessionController::class, 'store'])
     ->middleware('throttle:5,1')
     ->name('login.store');
+
+Route::get('products', [ProductController::class, 'index'])->name('products.index');
