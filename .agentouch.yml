@@ -1,7 +1,14 @@
 version: 1
 
 app:
-  image: php:8.3-cli-alpine
+  image: ai-agent-php:8.3
   processes:
     web:
-      command: php artisan serve --host=0.0.0.0 --port=8000
+      command: >
+        sh -lc "
+          [ -f .env ] || cp .env.example .env;
+          composer install;
+          grep -q '^APP_KEY=base64:' .env || php artisan key:generate --force --no-interaction;
+          php artisan migrate --force --no-interaction;
+          php artisan serve --host=0.0.0.0 --port=8000
+        "
