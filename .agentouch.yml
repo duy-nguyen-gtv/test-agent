@@ -1,7 +1,7 @@
 version: 1
 
 app:
-  image: test-agent-php
+  image: test-agent-php:latest
   processes:
     web:
       command: >
