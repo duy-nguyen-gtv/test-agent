@@ -1,7 +1,7 @@
 version: 1
 
 app:
-  image: ai-agent-php:8.3
+  image: test-agent-php
   processes:
     web:
       command: >
