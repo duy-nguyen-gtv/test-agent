@@ -15,3 +15,7 @@ app:
       expose: main
       healthcheck:
         command: curl -fsS http://localhost:8000/up
+
+verify:
+  - vendor/bin/pint --test
+  - php artisan test --compact
