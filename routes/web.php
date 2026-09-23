@@ -13,6 +13,10 @@ Route::get('tos', function () {
     return view('tos');
 })->name('tos');
 
+Route::get('poc', function () {
+    return view('poc');
+})->name('poc');
+
 Route::get('register', [RegisteredUserController::class, 'create'])->name('register');
 Route::post('register', [RegisteredUserController::class, 'store'])->name('register.store');
 
