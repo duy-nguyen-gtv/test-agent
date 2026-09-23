@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthenticatedSessionController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisteredUserController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,3 +20,5 @@ Route::post('login', [AuthenticatedSessionController::class, 'store'])
 
 Route::get('contacts', [ContactController::class, 'create'])->name('contacts');
 Route::post('contacts', [ContactController::class, 'store'])->name('contacts.store');
+
+Route::get('products', [ProductController::class, 'index'])->name('products');
