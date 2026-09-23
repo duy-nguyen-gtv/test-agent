@@ -30,3 +30,7 @@ Route::get('contacts', [ContactController::class, 'create'])->name('contacts');
 Route::post('contacts', [ContactController::class, 'store'])->name('contacts.store');
 
 Route::get('products', [ProductController::class, 'index'])->name('products');
+
+Route::get('teams-at-scale', function () {
+    return view('teams-at-scale');
+})->name('teams-at-scale');
