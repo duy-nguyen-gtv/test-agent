@@ -4,6 +4,7 @@ app:
   image: test-agent-php:latest
   processes:
     web:
+      expose: main
       command: >
         sh -lc "
           [ -f .env ] || cp .env.example .env;
