@@ -2,15 +2,16 @@ version: 1
 
 app:
   image: test-agent-php:latest
+  setup:
+  - cp .env.example .env;
+  - composer install --no-interaction
+  - grep -q '^APP_KEY=base64:' .env || php artisan key:generate --force --no-interaction;
+  - npm ci
+  - php artisan migrate --seed --force
   processes:
     web:
-      expose: main
+      command: php artisan serve --host=0.0.0.0 --port=8000
       port: 8000
-      command: >
-        sh -lc "
-          [ -f .env ] || cp .env.example .env;
-          composer install;
-          grep -q '^APP_KEY=base64:' .env || php artisan key:generate --force --no-interaction;
-          php artisan migrate --force --no-interaction;
-          php artisan serve --host=0.0.0.0 --port=8000
-        "
+      expose: main
+      healthcheck:
+        command: curl -fsS http://localhost:8000/up
