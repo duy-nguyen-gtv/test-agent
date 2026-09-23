@@ -5,6 +5,7 @@ app:
   processes:
     web:
       expose: main
+      port: 8000
       command: >
         sh -lc "
           [ -f .env ] || cp .env.example .env;
