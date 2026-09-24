@@ -58,31 +58,10 @@
         </header>
 
         <section class="relative overflow-hidden">
-            <div class="w-full max-w-6xl px-6 py-20 mx-auto lg:py-32">
-                <div class="max-w-3xl">
-                    <p class="mb-4 text-sm font-medium text-[#f53003] dark:text-[#FF4433]">Software Agency</p>
-                    <h1 class="text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-                        We build software that moves your business forward.
-                    </h1>
-                    <p class="mt-6 text-lg leading-relaxed text-[#706f6c] dark:text-[#A1A09A]">
-                        ApexSoft is a full-service software agency. From strategy and design to engineering and
-                        support, we partner with ambitious teams to ship products that scale.
-                    </p>
-                    <div class="flex flex-wrap gap-4 mt-10">
-                        <a
-                            href="#about"
-                            class="inline-block px-6 py-3 text-sm font-medium text-white bg-[#1b1b18] border border-black rounded-sm hover:bg-black dark:bg-[#eeeeec] dark:border-[#eeeeec] dark:text-[#1C1C1A] dark:hover:bg-white dark:hover:border-white"
-                        >
-                            Learn more
-                        </a>
-                        <a
-                            href="#contact"
-                            class="inline-block px-6 py-3 text-sm font-medium border border-[#19140035] rounded-sm hover:border-[#1915014a] dark:border-[#3E3E3A] dark:hover:border-[#62605b]"
-                        >
-                            Get in touch
-                        </a>
-                    </div>
-                </div>
+            <div class="flex items-center justify-center w-full max-w-6xl px-6 py-20 mx-auto lg:py-32">
+                <h1 class="text-4xl font-semibold leading-tight tracking-tight text-center sm:text-5xl lg:text-6xl">
+                    CONTACT US FOR WORK
+                </h1>
             </div>
         </section>
 
