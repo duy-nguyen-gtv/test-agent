@@ -34,3 +34,18 @@ Route::get('products', [ProductController::class, 'index'])->name('products');
 Route::get('teams-at-scale', function () {
     return view('teams-at-scale');
 })->name('teams-at-scale');
+
+Route::get('posts', function () {
+    return view('posts', [
+        'post' => [
+            'title' => 'Building Faster with Laravel',
+            'author' => 'Jane Doe',
+            'published_at' => 'September 24, 2026',
+            'content' => [
+                'Laravel keeps getting better at helping teams ship features quickly without sacrificing code quality.',
+                'In this post we walk through a few patterns that have helped our team stay productive: thin controllers, expressive Eloquent models, and a healthy test suite.',
+                'The result is an application that is easy to reason about and a joy to work in, even as it grows.',
+            ],
+        ],
+    ]);
+})->name('posts');
