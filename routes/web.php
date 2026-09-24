@@ -18,6 +18,10 @@ Route::get('poc', function () {
     return view('poc');
 })->name('poc');
 
+Route::get('iphone', function () {
+    return view('iphone');
+})->name('iphone');
+
 Route::get('register', [RegisteredUserController::class, 'create'])->name('register');
 Route::post('register', [RegisteredUserController::class, 'store'])->name('register.store');
 
