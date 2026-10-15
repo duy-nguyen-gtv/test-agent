@@ -140,7 +140,10 @@
         <footer class="border-t border-[#e3e3e0] dark:border-[#3E3E3A]">
             <div class="flex flex-col items-center justify-between w-full max-w-6xl gap-4 px-6 py-8 mx-auto text-sm text-[#706f6c] dark:text-[#A1A09A] sm:flex-row">
                 <p>&copy; {{ date('Y') }} ApexSoft. All rights reserved.</p>
-                <p>Built with Laravel.</p>
+                <div class="flex items-center gap-6">
+                    <a href="{{ route('terms-of-conditions') }}" class="hover:text-[#f53003] dark:hover:text-[#FF4433] transition-colors">Terms and Conditions</a>
+                    <p>Built with Laravel.</p>
+                </div>
             </div>
         </footer>
     </body>

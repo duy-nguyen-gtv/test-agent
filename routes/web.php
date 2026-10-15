@@ -14,6 +14,10 @@ Route::get('tos', function () {
     return view('tos');
 })->name('tos');
 
+Route::get('terms-of-conditions', function () {
+    return view('terms-of-conditions');
+})->name('terms-of-conditions');
+
 Route::get('poc', function () {
     return view('poc');
 })->name('poc');
