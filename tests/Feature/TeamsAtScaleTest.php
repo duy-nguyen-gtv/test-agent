@@ -8,4 +8,5 @@ test('the teams at scale route returns a successful response', function () {
     $response->assertSee('Our projects');
     $response->assertSee('Platform Engineering');
     $response->assertSee('Acme Retail Platform');
+    $response->assertSee(route('services'));
 });

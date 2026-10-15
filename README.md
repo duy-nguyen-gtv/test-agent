@@ -35,6 +35,7 @@ composer dev
 | GET | `/tos` | Terms of use |
 | GET | `/poc` | Proof-of-concept page |
 | GET | `/teams-at-scale` | Teams/marketing page |
+| GET | `/services` | Services marketing page |
 
 ## Testing
 
