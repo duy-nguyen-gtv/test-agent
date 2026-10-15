@@ -75,6 +75,11 @@
                     >
                         Register
                     </button>
+
+                    <p class="text-xs text-[#706f6c] dark:text-[#A1A09A]">
+                        By creating an account you agree to our
+                        <a href="{{ route('terms-of-conditions') }}" class="underline underline-offset-4 hover:text-[#f53003] dark:hover:text-[#FF4433]">Terms and Conditions</a>.
+                    </p>
                 </form>
             </div>
         </main>
