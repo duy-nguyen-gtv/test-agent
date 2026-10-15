@@ -14,6 +14,10 @@ Route::get('tos', function () {
     return view('tos');
 })->name('tos');
 
+Route::get('policy', function () {
+    return view('policy');
+})->name('policy');
+
 Route::get('poc', function () {
     return view('poc');
 })->name('poc');
