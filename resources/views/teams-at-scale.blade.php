@@ -24,6 +24,7 @@
                     <a href="#teams" class="hover:text-[#f53003] dark:hover:text-[#FF4433] transition-colors">Teams</a>
                     <a href="#projects" class="hover:text-[#f53003] dark:hover:text-[#FF4433] transition-colors">Projects</a>
                     <a href="{{ route('products') }}" class="hover:text-[#f53003] dark:hover:text-[#FF4433] transition-colors">Products</a>
+                    <a href="{{ route('services') }}" class="hover:text-[#f53003] dark:hover:text-[#FF4433] transition-colors">Services</a>
                 </nav>
             </div>
         </header>

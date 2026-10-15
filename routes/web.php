@@ -34,3 +34,7 @@ Route::get('products', [ProductController::class, 'index'])->name('products');
 Route::get('teams-at-scale', function () {
     return view('teams-at-scale');
 })->name('teams-at-scale');
+
+Route::get('services', function () {
+    return view('services');
+})->name('services');
