@@ -10,6 +10,17 @@
     "license": "MIT",
     "require": {
         "php": "^8.3",
+        "ext-pdo": "*",
+        "ext-pdo_sqlite": "*",
+        "ext-sqlite3": "*",
+        "ext-pdo_mysql": "*",
+        "ext-mbstring": "*",
+        "ext-openssl": "*",
+        "ext-ctype": "*",
+        "ext-fileinfo": "*",
+        "ext-tokenizer": "*",
+        "ext-filter": "*",
+        "ext-session": "*",
         "laravel/framework": "^13.17",
         "laravel/tinker": "^3.0"
     },
