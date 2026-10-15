@@ -23,6 +23,7 @@
                 <nav class="hidden items-center gap-8 text-sm md:flex">
                     <a href="#about" class="hover:text-[#f53003] dark:hover:text-[#FF4433] transition-colors">About</a>
                     <a href="#team" class="hover:text-[#f53003] dark:hover:text-[#FF4433] transition-colors">Team</a>
+                    <a href="{{ route('services') }}" class="hover:text-[#f53003] dark:hover:text-[#FF4433] transition-colors">Services</a>
                     <a href="#contact" class="hover:text-[#f53003] dark:hover:text-[#FF4433] transition-colors">Contact</a>
                 </nav>
 
